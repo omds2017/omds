@@ -1,4 +1,4 @@
-deviceID = 'toUpdate'
+deviceID = 'device_toUpdate'
 google_account = "shasha.fengx@gmail.com"
 google_account_password = "blue@123"
 wifi_ap_name = "shz24f-umg-ap02-si-2.4G"
@@ -18,7 +18,7 @@ extra_plugin_key = ['--enable-logcat-log-support']
 bt_bench_pwd = 'testhouse'
 
 # if support device is needed, if not, don't modift it
-deviceID_support = 'toUpdate'
+deviceID_support = 'device_support_toUpdate'
 
 # DUT Location
 location = "US" # EU or US or PRC
