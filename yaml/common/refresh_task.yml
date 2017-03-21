@@ -1,0 +1,7 @@
+---
+- name: start to run task
+  hosts: localhost
+  remote_user: root
+  tasks:
+    - name: start to refresh all task yaml file ...
+      shell: python /home/buildbot/ansible_tasks/refresh_yml.py
