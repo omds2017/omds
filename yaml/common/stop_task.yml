@@ -1,6 +1,6 @@
 ---
 - name: Run Stop Container Mission
-  hosts: testbench
+  hosts: all
   remote_user: root
   tasks:
     - name: delete old script from node server ...
