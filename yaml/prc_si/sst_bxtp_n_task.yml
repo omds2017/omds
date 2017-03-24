@@ -1,0 +1,27 @@
+---
+- name: start to run task
+  hosts: localhost
+  remote_user: root
+  tasks:
+    - name: start to generate target docker image
+      shell: python /home/buildbot/ansible_tasks/work.py /home/buildbot/ansible_tasks/omds/config/prc_si/sst/sst_bxtp_n_task
+- name: Run IPATH service
+  hosts: demo
+  remote_user: root
+  tasks:
+    - name: delete old omds_client package
+      file: dest=/tmp/omds_client state=absent
+    - name: copy omds_client package to node server
+      copy: src=/home/buildbot/ansible_tasks/task_sst_bxtp_n_task/omds_client dest=/tmp/
+    - name: start to initial running environment ...
+      command: python /tmp/omds_client/initial_env.py
+      register: result
+    - name: show output
+      debug: var=result.stdout_lines
+    - name: generate report link
+      command: python /tmp/omds_client/return_ip_address.py
+      register: result
+    - name: please copy below report link to check IPATH running process and TCR link
+      debug: var=result.stdout_lines
+    - name: start to run, it will last long time ...
+      command: python /tmp/omds_client/start.py 
