@@ -1,0 +1,40 @@
+deviceID = 'device_toUpdate'
+google_account = "shasha.fengx@gmail.com"
+google_account_password = "blue@123"
+wifi_ap_name = "shz24f-umg-ap02-si-2.4G"
+wifi_ap_pwd = "test@2017"
+campain_file = "../testsuite/campaign/stability/campaign_short_SOFIA4G_wifi.xml"
+url_flash_files = "toUpdate"
+build_variant = "toUpdate"
+board_type = "toUpdate"
+
+# special plugins key for special platform
+# such as '--enable-logcat-log-support' is only need for support device plugged
+extra_plugin_key = ['--enable-logcat-log-support']
+
+# the duration time of running test plan, default value is total 18h = 64800s
+test_plan_duration = 36000
+
+# password of bench for BT cases
+bt_bench_pwd = 'testhouse'
+
+# if support device is needed, if not, don't modift it
+deviceID_support = 'device_support_toUpdate'
+
+# DUT Location
+location = "US" # EU or US or PRC
+
+# if platform only support ladndscape mode such as BXTP
+screen_is_portrait = 'False'
+
+# if run post commit
+is_run_post_commit = False
+
+#"WPA/WPA2 PSK" or "None" or "WEP" or "802.1x EAP"
+wifi_ap_security = "WPA/WPA2 PSK"
+
+###############if test telephone cases,below must be given################
+sim_card_number = 'toUpdate'
+sim_card_number_support = 'toUpdate'
+voice_mail_number = "10010"
+sms_mms_receiver_sim_card_number = "toUpdate"
