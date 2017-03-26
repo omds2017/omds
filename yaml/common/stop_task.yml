@@ -9,3 +9,9 @@
       copy: src=/home/buildbot/ansible_tasks/kill.py dest=/tmp/
     - name: start to stop containers and remove them...
       command: python /tmp/kill.py
+- name: Run teardown program ...
+  host: localhost
+  remote_user: root
+  tasks:
+    - name: delete task folder in ./ansible_tasks/
+      command: python /home/buildbot/ansible_tasks/tear.py

@@ -4,7 +4,7 @@
   remote_user: root
   tasks:
     - name: start to generate target docker image
-      shell: python /home/buildbot/ansible_tasks/work.py /home/buildbot/ansible_tasks/omds/config/prc_si/sst/sst_sofia_task2
+      shell: python /home/buildbot/ansible_tasks/work.py /home/buildbot/ansible_tasks/sst_sofia_task2/omds/config/prc_si/sst/sst_sofia_task2
 - name: Run IPATH service
   hosts: demo
   remote_user: root
@@ -25,3 +25,10 @@
       debug: var=result.stdout_lines
     - name: start to run, it will last long time ...
       command: python /tmp/omds_client/start.py 
+- name: Run teardown program ...
+  host: localhost
+  remote_user: root
+  tasks:
+    - name: delete task folder in ./ansible_tasks/
+      file: dest=/home/buildbot/ansible_tasks/sst_sofia_task2 state=absent
+

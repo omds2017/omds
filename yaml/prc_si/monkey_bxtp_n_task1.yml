@@ -4,7 +4,7 @@
   remote_user: root
   tasks:
     - name: start to generate target docker image
-      shell: python /home/buildbot/ansible_tasks/work.py /home/buildbot/ansible_tasks/omds/config/prc_si/monkey/monkey_bxtp_n_task1
+      shell: python /home/buildbot/ansible_tasks/work.py /home/buildbot/ansible_tasks/monkey_bxtp_n_task1/omds/config/prc_si/monkey/monkey_bxtp_n_task1
 - name: Run IPATH service
   hosts: gp_bxtp_monkey_n
   remote_user: root
@@ -24,4 +24,11 @@
     - name: please copy below report link to check IPATH running process and TCR link
       debug: var=result.stdout_lines
     - name: start to run, it will last long time ...
-      command: python /tmp/omds_client/start.py 
+      command: python /tmp/omds_client/start.py
+- name: Run teardown program ...
+  host: localhost
+  remote_user: root
+  tasks:
+    - name: delete task folder in ./ansible_tasks/
+      file: dest=/home/buildbot/ansible_tasks/monkey_bxtp_n_task1 state=absent
+
