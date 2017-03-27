@@ -21,7 +21,7 @@
     - name: start to run, it will last long time ...
       command: python /tmp/omds_client/start.py
 - name: Run teardown program ...
-  host: localhost
+  hosts: localhost
   remote_user: root
   tasks:
     - name: delete task folder in ./ansible_tasks/
