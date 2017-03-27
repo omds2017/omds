@@ -30,5 +30,5 @@
   remote_user: root
   tasks:
     - name: delete task folder in ./ansible_tasks/
-      file: dest=/home/buildbot/ansible_tasks/monkey_bxtp_n_task1 state=absent
+      file: dest=/home/buildbot/ansible_tasks/task_monkey_bxtp_n_task1 state=absent
 

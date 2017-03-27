@@ -30,5 +30,5 @@
   remote_user: root
   tasks:
     - name: delete task folder in ./ansible_tasks/
-      file: dest=/home/buildbot/ansible_tasks/sst_sofia_task2 state=absent
+      file: dest=/home/buildbot/ansible_tasks/task_sst_sofia_task2 state=absent
 
