@@ -13,11 +13,6 @@
       file: dest=/tmp/omds_client state=absent
     - name: copy omds_client package to node server
       copy: src=/home/buildbot/ansible_tasks/task_sst_bxtp_n_task1/omds_client dest=/tmp/
-    - name: start to initial running environment ...
-      command: python /tmp/omds_client/initial_env.py
-      register: result
-    - name: show output
-      debug: var=result.stdout_lines
     - name: generate report link
       command: python /tmp/omds_client/return_ip_address.py
       register: result
