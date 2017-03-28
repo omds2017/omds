@@ -7,6 +7,8 @@ campain_file = "../testsuite/campaign/stability/campaign_short_BXTP_n_car.xml"
 url_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/n_car-release_candidate/2"
 build_variant = "bxtp_abl_car-userdebug"
 board_type = "bxtp_abl_mrb"
+credentials = "lguix:AS!@as12"
+
 
 # special plugins key for special platform
 # such as '--enable-logcat-log-support' is only need for support device plugged
