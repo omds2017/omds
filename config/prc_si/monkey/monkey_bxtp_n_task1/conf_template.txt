@@ -4,8 +4,8 @@ google_account_password = "blue@123"
 wifi_ap_name = "SHZ24F-Juniper-AP01"
 wifi_ap_pwd = "test@2017"
 campain_file = "../testsuite/campaign/monkey/campaign_monkey_bxtp_N-car.xml"
-zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/build/eng-builds/master/PSI/daily/20170328_1285/gordon_peak/userdebug/gordon_peak-flashfiles-O0l001285.zip"
-board_type = "bxtp_abl_lh"
+zip_flash_files = "toUpdate"
+board_type = "toUpdate"
 
 # special plugins key for special platform
 # such as '--enable-logcat-log-support' is only need for support device plugged
