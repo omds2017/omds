@@ -6,13 +6,14 @@ wifi_ap_pwd = "test@2017"
 campain_file = "../testsuite/campaign/monkey/campaign_monkey_bxtp_N-car.xml"
 zip_flash_files = "toUpdate"
 board_type = "toUpdate"
+build_variant = "toUpdate"
 
 # special plugins key for special platform
 # such as '--enable-logcat-log-support' is only need for support device plugged
 extra_plugin_key = ['--enable-logcat-log-support']
 
 # the duration time of running test plan, default value is total 18h = 64800s
-test_plan_duration = 64800
+test_plan_duration = 60
 
 # password of bench for BT cases
 bt_bench_pwd = 'testhouse'
