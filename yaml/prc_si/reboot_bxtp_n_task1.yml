@@ -13,6 +13,8 @@
       file: dest=/tmp/omds_client state=absent
     - name: copy omds_client package to node server
       copy: src=/home/buildbot/ansible_tasks/task_reboot_bxtp_n_task1/omds_client dest=/tmp/
+    - name: delete old run_pulls package
+      file: dest=/tmp/run_pulls state=absent
     - name: copy run_pulls package to node server
       copy: src=/home/buildbot/ansible_tasks/task_reboot_bxtp_n_task1/omds_server/run_pulls dest=/tmp/
     - name: generate report link
