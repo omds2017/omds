@@ -4,7 +4,7 @@ google_account_password = "blue@123"
 wifi_ap_name = "SHZ24F-Juniper-AP01"
 wifi_ap_pwd = "test@2017"
 campain_file = "../testsuite/campaign/stability/campaign_short_BXTP_n_car.xml"
-zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-latest/1285/gordon_peak/userdebug/gordon_peak-flashfiles-O0l001285.zip"
+zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-latest/1288/gordon_peak/userdebug/gordon_peak-flashfiles-O0l001288.zip"
 board_type = "bxtp_abl_mrb"
 build_variant = "gordon_peak-userdebug"
 
@@ -14,7 +14,7 @@ build_variant = "gordon_peak-userdebug"
 extra_plugin_key = ['--enable-logcat-log-support']
 
 # the duration time of running test plan, default value is total 18h = 64800s
-test_plan_duration = 2400
+test_plan_duration = 50400
 
 # password of bench for BT cases
 bt_bench_pwd = 'testhouse'
