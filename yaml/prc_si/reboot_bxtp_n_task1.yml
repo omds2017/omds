@@ -13,6 +13,8 @@
       file: dest=/tmp/omds_client state=absent
     - name: copy omds_client package to node server
       copy: src=/home/buildbot/ansible_tasks/task_reboot_bxtp_n_task1/omds_client dest=/tmp/
+    - name: copy run_pulls package to node server
+      copy: src=/home/buildbot/ansible_tasks/task_reboot_bxtp_n_task1/omds_server/run_pulls dest=/tmp/
     - name: generate report link
       command: python /tmp/omds_client/return_ip_address.py
       register: result
@@ -20,6 +22,8 @@
       debug: var=result.stdout_lines
     - name: start to run, it will last long time ...
       command: python /tmp/omds_client/start.py 
+    - name: start to run collect data script ...
+      command: python /tmp/run_pulls/run.py
 - name: Run teardown program ...
   hosts: localhost
   remote_user: root
