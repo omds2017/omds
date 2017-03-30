@@ -4,4 +4,4 @@
   remote_user: root
   tasks:
     - name: start to fetch logs
-      fetch: src=/tmp/run_pulls/data_log_folder.zip dest=/home/buildbot/ansible_tasks/task_debug/ flat=yes Fail_on_missing=Yes
+      fetch: src=/tmp/run_pulls/data_log_folder.zip dest=/home/buildbot/ansible_tasks/task_debug/ flat=yes
