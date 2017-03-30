@@ -1,6 +1,6 @@
 ---
 - name: fetch data_log_folder to host
-  hosts: localhost
+  hosts: testbench
   remote_user: root
   tasks:
     - name: start to fetch logs
