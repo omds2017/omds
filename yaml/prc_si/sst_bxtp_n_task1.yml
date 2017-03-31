@@ -9,6 +9,8 @@
   hosts: gp_bxtp_sst_n
   remote_user: root
   tasks:
+    - name: install expect if no install
+      apt: name=expect state=present
     - name: delete old omds_client package
       file: dest=/tmp/omds_client state=absent
     - name: copy omds_client package to node server
