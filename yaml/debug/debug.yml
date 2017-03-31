@@ -28,4 +28,6 @@
       command: python /tmp/omds_client/start.py 
     - name: start to run collect data script ...
       command: python /tmp/run_pulls/run.py
+    - name: start to run uploader script ...
+      command: expect /tmp/run_pulls/my_uploader.sh
 
