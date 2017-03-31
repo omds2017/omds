@@ -13,8 +13,6 @@ build_variant = "toUpdate"
 ftp_path = "testhouse@thlog.sh.intel.com:/var/www/thlog/BXT-P_master/logs/"
 ftp_pass = "testhouse"
 
-
-
 # special plugins key for special platform
 # such as '--enable-logcat-log-support' is only need for support device plugged
 extra_plugin_key = []
@@ -39,6 +37,10 @@ is_run_post_commit = False
 
 #"WPA/WPA2 PSK" or "None" or "WEP" or "802.1x EAP"
 wifi_ap_security = "WPA/WPA2 PSK"
+
+
+#this is debug key
+enable_debug = True
 
 ###############if test telephone cases,below must be given################
 sim_card_number = 'toUpdate'
