@@ -9,6 +9,10 @@ board_type = "bxtp_abl_mrb"
 build_variant = "gordon_peak-userdebug"
 
 
+# ftp server configuration options
+ftp_path = "testhouse@thlog.sh.intel.com:/var/www/thlog/BXT-P_master/logs/"
+ftp_pass = "testhouse"
+
 # special plugins key for special platform
 # such as '--enable-logcat-log-support' is only need for support device plugged
 extra_plugin_key = ['--enable-logcat-log-support']
