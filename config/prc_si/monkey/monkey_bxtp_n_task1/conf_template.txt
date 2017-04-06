@@ -38,7 +38,7 @@ is_run_post_commit = False
 #"WPA/WPA2 PSK" or "None" or "WEP" or "802.1x EAP"
 wifi_ap_security = "WPA/WPA2 PSK"
 
-enable_debug = True
+enable_debug = False
 ###############if test telephone cases,below must be given################
 sim_card_number = 'toUpdate'
 sim_card_number_support = 'toUpdate'
