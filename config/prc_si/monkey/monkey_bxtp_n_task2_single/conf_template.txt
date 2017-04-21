@@ -1,0 +1,46 @@
+deviceID = 'device_toUpdate'
+google_account = "shasha.fengx@gmail.com"
+google_account_password = "blue@123"
+wifi_ap_name = "SHZ24F-Juniper-AP01"
+wifi_ap_pwd = "test@2017"
+campain_file = "../testsuite/campaign/monkey/campaign_monkey_bxtp_N-car.xml"
+zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-release_candidate/542/gordon_peak/userdebug/gordon_peak-flashfiles-O00000542.zip"
+board_type = "bxtp_abl_mrb"
+build_variant = "gordon_peak-userdebug"
+
+
+# ftp server configuration options
+ftp_path = "testhouse@thlog.sh.intel.com:/var/www/thlog/BXT-P_master/logs/"
+ftp_pass = "testhouse"
+
+# special plugins key for special platform
+# such as '--enable-logcat-log-support' is only need for support device plugged
+extra_plugin_key = ['--enable-logcat-log-support']
+
+# the duration time of running test plan, default value is total 18h = 64800s
+test_plan_duration = 50400
+
+# password of bench for BT cases
+bt_bench_pwd = 'testhouse'
+
+# if support device is needed, if not, don't modift it
+deviceID_support = 'device_support_toUpdate'
+
+# DUT Location
+location = "US" # EU or US or PRC
+
+# if platform only support ladndscape mode such as BXTP
+screen_is_portrait = 'False'
+
+# if run post commit
+is_run_post_commit = False
+
+#"WPA/WPA2 PSK" or "None" or "WEP" or "802.1x EAP"
+wifi_ap_security = "WPA/WPA2 PSK"
+
+enable_debug = False
+###############if test telephone cases,below must be given################
+sim_card_number = 'toUpdate'
+sim_card_number_support = 'toUpdate'
+voice_mail_number = "10010"
+sms_mms_receiver_sim_card_number = "toUpdate"
