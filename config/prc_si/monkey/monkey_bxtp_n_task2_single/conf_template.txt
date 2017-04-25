@@ -18,7 +18,7 @@ ftp_pass = "testhouse"
 extra_plugin_key = ['--enable-logcat-log-support']
 
 # the duration time of running test plan, default value is total 18h = 64800s
-test_plan_duration = 50400
+test_plan_duration = 252000
 
 # password of bench for BT cases
 bt_bench_pwd = 'testhouse'
