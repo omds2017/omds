@@ -4,7 +4,7 @@ google_account_password = "blue@123"
 wifi_ap_name = "SHZ24F-Juniper-AP01"
 wifi_ap_pwd = "test@2017"
 campain_file = "../testsuite/campaign/punit/campaign_punit_adb_boot.xml"
-zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-latest/1330/gordon_peak/userdebug/gordon_peak-flashfiles-O0l001330.zip"
+zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-latest/1333/gordon_peak/userdebug/gordon_peak-flashfiles-O0l001333.zip"
 board_type = "bxtp_abl_mrb"
 build_variant = "gordon_peak-userdebug"
 
