@@ -1,0 +1,37 @@
+---
+- name: start to run task
+  hosts: localhost
+  remote_user: root
+  tasks:
+    - name: start to generate target docker image
+      shell: python /home/buildbot/ansible_tasks/work.py /home/buildbot/ansible_tasks/reboot_bxtp_n_task1_single/omds/config/prc_si/reboot/reboot_bxtp_n_task1_single
+- name: Run IPATH service
+  hosts: reboot_single_1
+  remote_user: root
+  tasks:
+    - name: install expect if no install
+      apt: name=expect state=present
+    - name: delete old omds_client package
+      file: dest=/tmp/omds_client state=absent
+    - name: copy omds_client package to node server
+      copy: src=/home/buildbot/ansible_tasks/task_reboot_bxtp_n_task1_single/omds_client dest=/tmp/
+    - name: delete old run_pulls package
+      file: dest=/tmp/run_pulls state=absent
+    - name: copy run_pulls package to node server
+      copy: src=/home/buildbot/ansible_tasks/task_reboot_bxtp_n_task1_single/omds_server/run_pulls dest=/tmp/
+    - name: generate report link
+      command: python /tmp/omds_client/return_ip_address.py
+      register: result
+    - name: please copy below report link to check IPATH running process and TCR link
+      debug: var=result.stdout_lines
+    - name: start to run, it will last long time ...
+      command: python /tmp/omds_client/start.py
+    - name: start to run collect data script ...
+      command: python /tmp/run_pulls/run.py
+- name: Run teardown program ...
+  hosts: localhost
+  remote_user: root
+  tasks:
+    - name: delete task folder in ./ansible_tasks/
+      file: dest=/home/buildbot/ansible_tasks/task_reboot_bxtp_n_task1_single state=absent
+
