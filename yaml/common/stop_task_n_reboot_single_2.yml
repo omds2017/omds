@@ -1,0 +1,17 @@
+---
+- name: Run Stop Container Mission
+  hosts: reboot_single_2
+  remote_user: root
+  tasks:
+    - name: delete old script from node server ...
+      file: dest=/tmp/kill.py state=absent
+    - name: copy latest script to node server ...
+      copy: src=/home/buildbot/ansible_tasks/kill.py dest=/tmp/
+    - name: start to stop containers and remove them...
+      command: python /tmp/kill.py
+- name: Run teardown program ...
+  hosts: localhost
+  remote_user: root
+  tasks:
+    - name: delete task folder in ./ansible_tasks/
+      command: python /home/buildbot/ansible_tasks/tear.py
