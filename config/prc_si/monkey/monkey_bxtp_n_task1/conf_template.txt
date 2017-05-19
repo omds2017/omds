@@ -1,4 +1,4 @@
-dviceID = 'device_toUpdate'
+deviceID = 'device_toUpdate'
 google_account = "shasha.fengx@gmail.com"
 google_account_password = "blue@123"
 wifi_ap_name = "SHZ24F-Juniper-AP01"
