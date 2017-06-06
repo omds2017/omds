@@ -10,7 +10,7 @@ build_variant = "gordon_peak-userdebug"
 
 
 # ftp server configuration options
-ftp_path = "testhouse@thlog.sh.intel.com:/var/www/thlog/BXT-P_master/logs/"
+ftp_path = "testhouse@th.sh.intel.com:/var/www/log/BXT-P_master/logs/"
 ftp_pass = "testhouse"
 
 # special plugins key for special platform
