@@ -4,7 +4,7 @@ google_account_password = "blue@123"
 wifi_ap_name = "SHZ24F-Juniper-AP01"
 wifi_ap_pwd = "test@2017"
 campain_file = "../testsuite/campaign/monkey/campaign_monkey_bxtp_N-car.xml"
-zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-latest/1376/gordon_peak/userdebug/gordon_peak-flashfiles-O0l001376.zip"
+zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-release_candidate/566/gordon_peak/userdebug/gordon_peak-flashfiles-O00000566.zip"
 board_type = "bxtp_abl_mrb"
 build_variant = "gordon_peak-userdebug"
 
