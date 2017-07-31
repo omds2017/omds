@@ -4,7 +4,7 @@ google_account_password = "blue@123"
 wifi_ap_name = "SHZ24F-Juniper-AP01"
 wifi_ap_pwd = "test@2017"
 campain_file = "../testsuite/campaign/stability/campaign_short_BXTP_M.xml"
-zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/bxtp_ivi_m-latest/535/r0_bxtp_abl/userdebug/r0_bxtp_abl-flashfiles-bxtp_ivi_m-lst-535.zip"
+zip_flash_files = "https://mcg-depot.intel.com/artifactory/cactus-absp-jf/bxtp_ivi_m-latest/373/r0_bxtp_abl/userdebug/r0_bxtp_abl-flashfiles-bxtp_ivi_m-lst-373.zip"
 board_type = "bxtp_abl_mrb"
 build_variant = "r0_bxtp_abl-userdebug"
 
