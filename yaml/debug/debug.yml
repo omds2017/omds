@@ -4,9 +4,9 @@
   remote_user: root
   tasks:
     - name: start to generate target docker image
-      shell: python /home/buildbot/ansible_tasks/work.py /home/buildbot/ansible_tasks/debug/omds/config/debug/debug
+      shell: python /home/testhouse/ansible_tasks/works.py /home/testhouse/ansible_tasks/debug/omds/config/debug/debug
 - name: Run IPATH service
-  hosts: testbench
+  hosts: test_bench
   remote_user: root
   tasks:
     - name: install expect if no install
@@ -14,11 +14,11 @@
     - name: delete old omds_client package
       file: dest=/tmp/omds_client state=absent
     - name: copy omds_client package to node server
-      copy: src=/home/buildbot/ansible_tasks/task_debug/omds_client dest=/tmp/
+      copy: src=/home/testhouse/ansible_tasks/task_debug/omds_client dest=/tmp/
     - name: delete old run_pulls package
       file: dest=/tmp/run_pulls state=absent
     - name: copy run_pulls package to node server
-      copy: src=/home/buildbot/ansible_tasks/task_debug/omds_server/run_pulls dest=/tmp/
+      copy: src=/home/testhouse/ansible_tasks/task_debug/omds_server/run_pulls dest=/tmp/
     - name: generate report link
       command: python /tmp/omds_client/return_ip_address.py
       register: result
